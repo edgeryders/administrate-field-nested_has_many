@@ -44,7 +44,9 @@ module Administrate
       end
 
       def self.dashboard_for_resource(resource)
-        "#{resource.to_s.classify}Dashboard".constantize
+        # "#{resource.to_s.classify}Dashboard".constantize
+        # NOTE: quick fix as the generated dashboard name is wrong.
+        resource == :names ? AnnotatorStore::TagNameDashboard : "#{resource.to_s.classify}Dashboard".constantize
       end
 
       def self.associated_attributes(associated_resource)
