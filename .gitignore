@@ -1,2 +1,6 @@
 Gemfile.lock
 pkg/
+
+
+# Ignore RubyMine settings
+/.idea
